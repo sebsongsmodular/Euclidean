@@ -1,3 +1,5 @@
+![Sebsongs Modular Euclidean](https://modular.sebsongs.com/wp-content/uploads/2022/04/Euclidean_cropped-1-94x300.png)
+
 # Euclidean
 Firmware for the Sebsongs Modular **Euclidean** eurorack module sold on [Thonk](https://www.thonk.co.uk/shop/sebsongs-euclidean/).
 
