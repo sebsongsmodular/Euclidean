@@ -23,13 +23,13 @@ The first version uploaded to this repo is version 1.2. This version has all the
 
 ## Prerequisites for uploading firmware to an Arduino Nano board
 - Install [Arduino IDE 1.8.19](https://www.arduino.cc/en/software). It should work fine with the latest version 2.XX too, but has not been thorougly tested yet.
-- For the Arduino Nano Clones that come with the Thonk kit, a driver for the on board CH340 Serial converter must be installed. [Sparkfun](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all) has a great guide and available drivers.
+- For the Arduino Nano Clones that come with the Thonk kit, a driver for the on board CH340 Serial converter must be installed. [Sparkfun](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all) has a great guide and available drivers. This is not needed for original Arduino Nanos and Nano Every.
 - The following libraries must be installed in the Arduino IDE before proceeding (Tools/Manage Libraries):
   - **Encoder** version 1.4.2 by Paul Stoffregen
   - **LedControl** version 1.0.6 by Eberhard Fahle
 - Connect the Nano board to an available USB port on your computer with a USB to USB mini cable.
 
-## Uploading the firmware
+## Uploading the firmware (Arduino Nano / ATMEGA328)
 - Open the .ino file in Arduino IDE.
 - Make the following settings in the Tools menu:
   - Board: Arduino Nano
@@ -37,5 +37,14 @@ The first version uploaded to this repo is version 1.2. This version has all the
   - Processor: Atmega 328P (Old Bootloader) <sub>(if your module was purchased from Thonk in or after 2023-01-01)</sub>
   - Port: Should look something like "dev/cu.usbserial-10"
   - Programmer: USBtinyISP
+- Compile the firmware by pressing CMD+R (mac) or CTRL+R (win). The Arduino compiler should say "Done compiling" and return no errors.
+- Upload the firmware to the Nano board by pressing CMD+U (mac) or CTRL+U (win). If everything went well, the Arduino IDE will return "Done uploading" and return no errors.
+
+## Uploading the firmware (Arduino Nano Every / MEGA4809)
+- Open the .ino file in Arduino IDE.
+- Make the following settings in the Tools menu:
+  - Board: Arduino megaAVR Boards -> Arduino Every
+  - Registers Emulation: ATMEGA328
+  - Port: Should look something like "dev/cu.usbserial-21401 (Arduino Nano Every)"
 - Compile the firmware by pressing CMD+R (mac) or CTRL+R (win). The Arduino compiler should say "Done compiling" and return no errors.
 - Upload the firmware to the Nano board by pressing CMD+U (mac) or CTRL+U (win). If everything went well, the Arduino IDE will return "Done uploading" and return no errors.
